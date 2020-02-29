@@ -77,3 +77,5 @@ gulp.task('build-fonts', function () {
   return gulp.src('src/fonts')
     .pipe(gulp.dest('dist/fonts'));
 });
+
+gulp.task('build', gulp.parallel('build-html', 'build-styles', 'build-fonts'));
